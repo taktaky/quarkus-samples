@@ -11,7 +11,7 @@ import java.util.Set;
 @Consumes(MediaType.APPLICATION_JSON)
 public class PetResource {
 
-    private Set<Pet> pets = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
+    private final Set<Pet> pets = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
 
     public PetResource() {
         pets.add(new Pet("ムギ",  "犬：トイプードル"));
